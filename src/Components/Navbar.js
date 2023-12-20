@@ -6,8 +6,8 @@ import React from 'react';
 function Navbar() {
   return (
     <div>
-          <nav class="navbar navbar-expand-lg bg-body-tertiary">
-        <div class="container-fluid">
+          <nav class="navbar navbar-expand-lg bg-body-tertiary "  >
+        <div class="container-fluid bg-secondary text-white">
           <a class="navbar-brand" href="/">Deloitte Blogs</a>
           <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
@@ -21,10 +21,10 @@ function Navbar() {
               <Link to="/Posts" class="navbar-brand">Posts</Link>
               </li>
               <li class="nav-item">
-              <Link to="/Register" class="navbar-brand">Login</Link>
+              <Link to="/Register" class="navbar-brand">Register</Link>
               </li>
               <li class="nav-item">
-              <Link to="/Login" class="navbar-brand">Register</Link>
+              <Link to="/Login" class="navbar-brand">Login</Link>
               </li>
             </ul>
           </div>
