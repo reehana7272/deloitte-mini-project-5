@@ -1,9 +1,10 @@
 import React from 'react';
-
+import blogs from './Image/blogs.jpg'
+import "./App.css"
 function Body(props) {
     return (
         <div>
-          <p> I m body</p> 
+          <img src={blogs} className="image" ></img>
         </div>
     );
 }
