@@ -20,7 +20,7 @@ function Navbar(props) {
                                 <Link to="/Layout" class="navbar-brand">Home</Link>
                             </li>
                             <li class="nav-item">
-                                <Link to="/Posts" class="navbar-brand">Blogs</Link>
+                                <Link to="/Posts" class="navbar-brand">Posts</Link>
                             </li>
                             <li class="nav-item">
                                 <Link to="/login" class="navbar-brand">Login</Link>

@@ -2,8 +2,8 @@ import React from 'react';
 import 'bootstrap/dist/css/bootstrap.css'; 
 function Footer1(props) {
     return (
-<div class="mt-5 pt-5 pb-5 footer w-5 h-5" >
-<div class="container">
+<div class="mt-5 pt-5 pb-5 footer w-3 h-5" >
+<div class="container w-5 h-5s">
   <div class="row">
     <div class="col-lg-5 col-xs-12 about-company">
       <h2>Heading</h2>

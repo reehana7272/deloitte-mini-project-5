@@ -1,29 +1,28 @@
-import React from 'react';
+import React, { useEffect } from 'react';
+import { Link } from 'react-router-dom';
+import { useState } from 'react';
+import axios from 'axios'
+import './App.css';
 
 function Posts(props) {
+
+    const [posts, setPosts] = useState([]);
+    
+    useEffect(() => {
+        axios.get("https://jsonplaceholder.typicode.com/posts")
+            .then((Response) => setPosts(Response.data))
+            .catch(() => { });
+    }, []);
+
     return (
         <div>
-            <div id="carouselExample" class="carousel slide">
-                <div class="carousel-inner">
-                    <div class="carousel-item active">
-                        <img src="..." class="d-block w-100" alt="..."></img>
-                    </div>
-                    <div class="carousel-item">
-                        <img src="..." class="d-block w-100" alt="..."></img>
-                    </div>
-                    <div class="carousel-item">
-                        <img src="..." class="d-block w-100" alt="..."></img>
-                    </div>
+            <h1 className='headr'>Blogs</h1>
+            <br></br>
+            {posts.map((object, index) => {
+                return <div obj={object} key={index} className='PostList'>
+                    <Link to={`/PostList/${object.id}`} >{object.title}</Link>
                 </div>
-                <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample" data-bs-slide="prev">
-                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                    <span class="visually-hidden">Previous</span>
-                </button>
-                <button class="carousel-control-next" type="button" data-bs-target="#carouselExample" data-bs-slide="next">
-                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                    <span class="visually-hidden">Next</span>
-                </button>
-            </div>
+            })}
         </div>
     );
 }

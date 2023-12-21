@@ -30,3 +30,12 @@ body{
     width: 100vw;
     height: 90vh;
   }
+  .PostList{
+    background-color: beige;
+    color: cadetblue;
+    text-align: center;
+  }
+  .headr{
+    text-align: center;
+    color: aquamarine;
+  }

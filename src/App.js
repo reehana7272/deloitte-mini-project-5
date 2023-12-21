@@ -5,6 +5,7 @@ import Login from './Components/login';
 import Navbar from './Components/Navbar';
 import Posts from './Components/Posts';
 import Register from './Components/Register';
+import PostList from './Components/PostList';
 
 function App() {
   return (
@@ -16,6 +17,7 @@ function App() {
             <Route path="/Navbar" element={<Navbar/>}></Route>
             <Route path="/Posts" element={<Posts/>}></Route>
             <Route path="/Register" element={<Register/>}></Route>
+            <Route path="/PostList/:id" element={<PostList />}> </Route>
     </Routes>
       </>
 
